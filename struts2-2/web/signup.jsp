@@ -11,9 +11,9 @@
     <title></title>
 </head>
 <body>
-<form action="user_login" method="post">
-    用户名：<input name="username"><br>
-    密码：<input type="password" name="password"><br>
+<form action="user_signup" method="post">
+    用户名：<input name="user.username"><br>
+    密码：<input type="password" name="user.password"><br>
     <input type="submit" value="注册"><br>
 
 </form>

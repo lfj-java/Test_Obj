@@ -9,13 +9,13 @@ public class Book implements Serializable {
     private Integer id;
     private String title;
     private String author;
-    private String amount;
+    private int amount;
 
     public Book(Integer id) {
         this.id = id;
     }
 
-    public Book(Integer id, String title, String author, String amount) {
+    public Book(Integer id, String title, String author, int amount) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -46,11 +46,11 @@ public class Book implements Serializable {
         this.author = author;
     }
 
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 }

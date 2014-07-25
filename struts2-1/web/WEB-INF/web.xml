@@ -8,8 +8,8 @@
         <filter-name>struts2</filter-name>
         <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
     </filter>
-    <servlet-mapping>
-        <servlet-name>struts2</servlet-name>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
         <url-pattern>/*</url-pattern>
-    </servlet-mapping>
+    </filter-mapping>
 </web-app>
