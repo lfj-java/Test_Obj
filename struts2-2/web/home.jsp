@@ -47,7 +47,6 @@ ${sessionScope.user.username}
         <td>${book.amount}</td>
         <td><a href="book_search?book.id=${book.id}">编辑</a></td>
         <td><a href="book_remove?book.id=${book.id}" onclick="return del()">删除</a></td>
-        <td></td>
     </tr>
     </c:forEach>
 </table>
