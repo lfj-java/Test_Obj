@@ -12,7 +12,7 @@ public class DB {
     private static final String USER = "root";
     private static final String PASSWORD = "123456";
 
-    public static Connection getConnextion() {
+    public static Connection getConnection() {
         try {
             new Driver();
             return DriverManager.getConnection(URL, USER, PASSWORD);

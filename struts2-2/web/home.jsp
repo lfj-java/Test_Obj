@@ -11,6 +11,8 @@
     <title></title>
 </head>
 <body>
+${sessionScope.user.username}
+
 
 </body>
 </html>

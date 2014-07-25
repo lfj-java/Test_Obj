@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class BookAction extends BaseAction {
     private Book book;
-    private Connection connection = DB.getConnextion();
+    private Connection connection = DB.getConnection();
     public String add() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("insert into book values (null,?,?,?)");
         preparedStatement.setString(1, book.getTitle());

@@ -2,20 +2,17 @@ package action;
 
 import action.entity.User;
 import action.util.DB;
-import org.apache.struts2.interceptor.RequestAware;
-import org.apache.struts2.interceptor.SessionAware;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Map;
 
 /**
  * Created by Administrator on 14-7-23.
  */
 public class UserAction extends BaseAction {
     private User user;
-    private Connection connection = DB.getConnextion();
+    private Connection connection = DB.getConnection();
     public String login() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("select * from user where username=? and password=?");
         preparedStatement.setString(1, user.getUsername());
