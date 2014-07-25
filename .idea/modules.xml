@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Test_Obj.iml" filepath="$PROJECT_DIR$/Test_Obj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struts2-1/struts2-1.iml" filepath="$PROJECT_DIR$/struts2-1/struts2-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struts2-2/struts2-2.iml" filepath="$PROJECT_DIR$/struts2-2/struts2-2.iml" />
+    </modules>
+  </component>
+</project>
+

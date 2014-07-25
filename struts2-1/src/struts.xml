@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="user" extends="struts-default">
+        <action name="user_*" class="action.UserAction" method="{1}">
+            <result name="login_success" type="redirectAction">book_list</result>
+            <result name="login_input">/index.jsp</result>
+            <result name="sigup_success" type="redirect">/index.jsp</result>
+            <result name="logout_success" type="redirect">/index.jsp</result>
+        </action>
+    </package>
+    <package name="book" extends="struts-default">
+        <action name="book_*" class="action.BookAction" method="{1}">
+            <result name="add_success" type="redirectAction">book_list</result>
+            <result name="list_success" type="redirect">/home.jsp</result>
+            <result name="search_success" type="redirect">/edit.jsp</result>
+            <result name="update_success" type="redirectAction">book_list</result>
+            <result name="remove_success" type="redirectAction">book_list</result>
+        </action>
+    </package>
+</struts>
