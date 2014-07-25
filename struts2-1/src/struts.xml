@@ -9,7 +9,7 @@
         <action name="user_*" class="action.UserAction" method="{1}">
             <result name="login_success" type="redirectAction">book_list</result>
             <result name="login_input">/index.jsp</result>
-            <result name="sigup_success" type="redirect">/index.jsp</result>
+            <result name="signup_success" type="redirect">/index.jsp</result>
             <result name="logout_success" type="redirect">/index.jsp</result>
         </action>
     </package>

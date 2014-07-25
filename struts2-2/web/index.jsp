@@ -12,6 +12,6 @@
       <a href="signup.jsp">注册</a>
 
   </form>
-
+  <em style="color: red;">${requestScope.message}</em><br>
   </body>
 </html>

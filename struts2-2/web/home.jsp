@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -7,12 +7,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title></title>
     <script>
         function del() {
-            return confirm("del?")
+            return confirm("del?");
         }
     </script>
 
@@ -43,10 +44,11 @@ ${sessionScope.user.username}
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.amount}</td>
-        <td><a href="book_search?=${book.id}">编辑</a></td>
-        <td><a href="book_remove?=${book.id}" onclick="return del()">删除</a></td>
+        <td><a href="book_search?book.id=${book.id}">编辑</a></td>
+        <td><a href="book_remove?book.id=${book.id}" onclick="return del()">删除</a></td>
         <td></td>
     </tr>
+    </c:forEach>
 </table>
 
 </body>

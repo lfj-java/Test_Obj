@@ -13,7 +13,7 @@
     <title></title>
     <script>
         function del() {
-            return confirm("DEL?")
+            return confirm("DEL?");
         }
     </script>
 </head>
@@ -44,9 +44,10 @@ ${sessionScope.user.username}
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.amount}</td>
-        <td><a href="book_search?=${book.id}">编辑</a></td>
-        <td><a href="book_remove?=${book.id}" onclick="return del()">删除</a></td>
+        <td><a href="book_search?book.id=${book.id}">编辑</a></td>
+        <td><a href="book_remove?book.id=${book.id}" onclick="return del()">删除</a></td>
     </tr>
+    </c:forEach>
 </table>
 </body>
 </html>

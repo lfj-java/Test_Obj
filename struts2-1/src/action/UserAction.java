@@ -29,13 +29,13 @@ public class UserAction extends BaseAction {
         }
     }
 
-    public String sigup() throws Exception {
+    public String signup() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("insert into user values(null,?,?)");
         preparedStatement.setString(1, user.getUsername());
         preparedStatement.setString(2, user.getPassword());
         preparedStatement.executeUpdate();
         DB.close(null, preparedStatement, null);
-        return "sigup_success";
+        return "signup_success";
     }
 
     public String logout() throws Exception {
