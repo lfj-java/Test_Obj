@@ -22,6 +22,7 @@
 <c:if test="${sessionScope.user eq null}"><c:redirect url="index.jsp"/> </c:if>
 ${sessionScope.user.username}
 <a href="user_logout">退出</a>
+<hr/>
 
 <form action="book_add" method="post">
     title:<input name="book.title"><br>
@@ -38,7 +39,7 @@ ${sessionScope.user.username}
         <th>AMOUNT</th>
         <th colspan="2">OPERATION</th>
     </tr>
-    <c:forEach var="book" items="${sessionScope.book}" varStatus="vs">
+    <c:forEach var="book" items="${sessionScope.books}" varStatus="vs">
     <tr>
         <td>${vs.count}</td>
         <td>${book.title}</td>

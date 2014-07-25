@@ -37,6 +37,7 @@ public class BookAction extends BaseAction {
         return "list_success";
     }
 
+
     public String search() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("select * from book where id=?");
         preparedStatement.setInt(1, book.getId());
@@ -47,6 +48,7 @@ public class BookAction extends BaseAction {
         DB.close(resultSet, preparedStatement, null);
         return "search_success";
     }
+
 
     public String update() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("update book set title=?,author=?,amount=? where id=?");

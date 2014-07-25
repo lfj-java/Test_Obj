@@ -1,6 +1,5 @@
 package action;
 
-
 import action.entity.User;
 import action.util.DB;
 
@@ -13,8 +12,7 @@ import java.sql.ResultSet;
  */
 public class UserAction extends BaseAction {
     private User user;
-    private Connection connection= DB.getconnection();
-
+    private Connection connection = DB.getConnection();
     public String login() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("select * from user where username = ? and password = ?");
         preparedStatement.setString(1, user.getUsername());
@@ -27,7 +25,7 @@ public class UserAction extends BaseAction {
             return "login_success";
         } else {
             getRequest().put("message", "用户名或密码错误");
-            return "input_success";
+            return "login_input";
         }
 
     }
@@ -40,6 +38,11 @@ public class UserAction extends BaseAction {
         DB.Close(null, preparedStatement, null);
         return "signup_success";
     }
+    public String logout() throws Exception {
+        getSession().clear();
+        return "logout_success";
+    }
+
 
     public User getUser() {
         return user;

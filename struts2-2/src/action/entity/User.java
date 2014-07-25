@@ -10,21 +10,20 @@ public class User implements Serializable {
     private String username;
     private String password;
 
-    public User(int id) {
-        this.id = id;
+    public User() {
     }
 
-    public User(int id, String username, String password) {
+    public User(Integer id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -5,14 +5,13 @@ import java.io.Serializable;
 /**
  * Created by Administrator on 14-7-24.
  */
-public class Book implements Serializable{
+public class Book implements Serializable {
     private Integer id;
     private String title;
     private String author;
     private int amount;
 
-    public Book(Integer id) {
-        this.id = id;
+    public Book() {
     }
 
     public Book(Integer id, String title, String author, int amount) {

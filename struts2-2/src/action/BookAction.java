@@ -14,8 +14,7 @@ import java.util.List;
  */
 public class BookAction extends BaseAction {
     private Book book;
-    private Connection connection = DB.getconnection();
-
+    private Connection connection = DB.getConnection();
     public String add() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("insert into book values (null ,?,?,?)");
         preparedStatement.setString(1, book.getTitle());
@@ -34,7 +33,8 @@ public class BookAction extends BaseAction {
             Book book = new Book(resultSet.getInt("id"), resultSet.getString("title"), resultSet.getString("author"), resultSet.getInt("amount"));
             books.add(book);
         }
-        DB.Close(resultSet,preparedStatement,null);
+        getSession().put("books", books);
+//        DB.Close(resultSet,preparedStatement,null);
         return "list_success";
     }
 
@@ -60,6 +60,7 @@ public class BookAction extends BaseAction {
         DB.Close(null, preparedStatement, null);
         return "update_success";
     }
+
 
     public String remove() throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement("delete from book where id=?");
